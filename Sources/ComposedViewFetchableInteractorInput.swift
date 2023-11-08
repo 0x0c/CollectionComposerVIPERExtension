@@ -13,9 +13,10 @@ public protocol ComposedViewFetchableInteractorInput: AnyObject {
 
     var repository: Repository { get }
 
+    func makeSections(for response: Repository.Entity) -> [any CollectionComposer.Section]
     func reload() async throws
     @discardableResult
-    func fetch(force: Bool) async throws
+    func fetch(force: Bool) async throws -> Repository.Entity
 }
 
 public extension ComposedViewFetchableInteractorInput {
@@ -24,7 +25,7 @@ public extension ComposedViewFetchableInteractorInput {
     }
 
     @discardableResult
-    func fetch(force: Bool = false) async throws {
-        try await fetch(force: force)
+    func fetch(force: Bool = false) async throws -> Repository.Entity {
+        return try await fetch(force: force)
     }
 }

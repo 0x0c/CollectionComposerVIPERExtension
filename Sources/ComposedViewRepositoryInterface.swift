@@ -6,7 +6,7 @@
 //
 
 public protocol ComposedViewRepositoryInterface {
-    associatedtype SectionModel
+    associatedtype Entity
 
-    func fetch(force: Bool) async throws -> [SectionModel]
+    func fetch(force: Bool) async throws -> Entity
 }
