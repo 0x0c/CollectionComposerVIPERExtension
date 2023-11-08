@@ -13,7 +13,7 @@ public protocol ComposedViewFetchableInteractorInput: AnyObject {
 
     var repository: Repository { get }
 
-    func makeSections(for response: Repository.Entity) -> [any CollectionComposer.Section]
+    func makeSections(for entity: Repository.Entity) -> [any CollectionComposer.Section]
     func reload() async throws
     @discardableResult
     func fetch(force: Bool) async throws -> Repository.Entity
