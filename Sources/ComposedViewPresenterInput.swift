@@ -13,5 +13,5 @@ public protocol ComposedViewPresenterInput: AnyObject {
     var sections: [any CollectionComposer.Section] { get }
 
     func storeSections(_ sections: [any CollectionComposer.Section])
-    func didSelectItem(_ item: AnyHashable, in section: any Section)
+    func didSelectItem(_ item: AnyHashable, in section: any Section, at indexPath: IndexPath)
 }
