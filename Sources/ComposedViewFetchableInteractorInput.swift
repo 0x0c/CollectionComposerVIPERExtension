@@ -9,9 +9,13 @@ import CollectionComposer
 import UIKit
 
 public protocol ComposedViewFetchableInteractorInput: AnyObject {
+    associatedtype Repository: ComposedViewRepositoryInterface
+
+    var repository: Repository { get }
+
     func reload() async throws
     @discardableResult
-    func fetch(force: Bool) async throws -> [any CollectionComposer.Section]
+    func fetch(force: Bool) async throws
 }
 
 public extension ComposedViewFetchableInteractorInput {
@@ -20,7 +24,7 @@ public extension ComposedViewFetchableInteractorInput {
     }
 
     @discardableResult
-    func fetch(force: Bool = false) async throws -> [any CollectionComposer.Section] {
-        return try await fetch(force: force)
+    func fetch(force: Bool = false) async throws {
+        try await fetch(force: force)
     }
 }
