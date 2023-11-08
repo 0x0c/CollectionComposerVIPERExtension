@@ -11,7 +11,7 @@ import UIKit
 public protocol ComposedViewFetchableInteractorInput: AnyObject {
     func reload() async throws
     @discardableResult
-    func fetch(force: Bool) async throws -> [CollectionComposer.Section]
+    func fetch(force: Bool) async throws -> [any CollectionComposer.Section]
 }
 
 public extension ComposedViewFetchableInteractorInput {
@@ -20,7 +20,7 @@ public extension ComposedViewFetchableInteractorInput {
     }
 
     @discardableResult
-    func fetch(force: Bool = false) async throws -> [CollectionComposer.Section] {
+    func fetch(force: Bool = false) async throws -> [any CollectionComposer.Section] {
         return try await fetch(force: force)
     }
 }

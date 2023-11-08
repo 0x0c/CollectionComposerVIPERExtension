@@ -10,7 +10,7 @@ import UIKit
 
 @MainActor
 public protocol ComposedViewPresenterInput: AnyObject {
-    var sections: [CollectionComposer.Section]? { get }
+    var sections: [any CollectionComposer.Section]? { get }
 
     func didItemSelect(indexPath: IndexPath)
 }

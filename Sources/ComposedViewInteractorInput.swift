@@ -9,5 +9,5 @@ import CollectionComposer
 import UIKit
 
 public protocol ComposedViewInteractorInput: AnyObject {
-    var sections: [CollectionComposer.Section]? { get set }
+    var sections: [any CollectionComposer.Section]? { get set }
 }

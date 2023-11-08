@@ -10,5 +10,5 @@ import UIKit
 
 @MainActor
 public protocol ComposedViewInput: AnyObject {
-    func update(sections: [CollectionComposer.Section])
+    func update(sections: [any CollectionComposer.Section])
 }
