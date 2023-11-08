@@ -5,9 +5,9 @@
         "package": "CollectionComposer",
         "repositoryURL": "https://github.com/0x0c/CollectionComposer.git",
         "state": {
-          "branch": null,
-          "revision": "4bc4d4d7aab493d4256038ba110afb0209b79eb5",
-          "version": "1.0.0"
+          "branch": "main",
+          "revision": "bcfda1b321287e9394df035bdcf514773fae987a",
+          "version": null
         }
       }
     ]
