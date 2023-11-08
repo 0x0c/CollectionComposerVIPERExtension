@@ -1,0 +1,16 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "CollectionComposer",
+        "repositoryURL": "https://github.com/0x0c/CollectionComposer.git",
+        "state": {
+          "branch": null,
+          "revision": "4bc4d4d7aab493d4256038ba110afb0209b79eb5",
+          "version": "1.0.0"
+        }
+      }
+    ]
+  },
+  "version": 1
+}
