@@ -5,14 +5,13 @@
 //  Created by Akira Matsuda on 2023/11/08.
 //
 
-import CollectionComposer
+import Foundation
 
-public protocol ComposedViewFetchableInteractorInput: AnyObject {
+public protocol ComposedViewFetchableInteractorInput: AnyObject, ComposedViewInteractorInput {
     associatedtype Repository: ComposedViewRepositoryInterface
 
     var repository: Repository { get }
 
-    func makeSections(for entity: Repository.Entity) -> [any CollectionComposer.Section]
     func reload() async throws
     func fetch(force: Bool) async throws
 }
