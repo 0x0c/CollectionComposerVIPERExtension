@@ -11,12 +11,13 @@ public protocol ComposedViewFetchableInteractorInput: AnyObject {
     associatedtype Repository: ComposedViewRepositoryInterface
 
     var repository: Repository { get }
+    var storage: Repository.Entity { get }
 
-    func fetch(force: Bool) async throws -> Repository.Entity
+    func fetch(force: Bool) async throws
 }
 
 public extension ComposedViewFetchableInteractorInput {
-    func fetch(force: Bool = false) async throws  -> Repository.Entity {
-        return try await fetch(force: force)
+    func fetch(force: Bool = false) async throws {
+        try await fetch(force: force)
     }
 }

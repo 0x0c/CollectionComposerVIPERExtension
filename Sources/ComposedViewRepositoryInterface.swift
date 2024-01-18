@@ -7,6 +7,4 @@
 
 public protocol ComposedViewRepositoryInterface {
     associatedtype Entity
-
-    func fetch(force: Bool) async throws -> Entity
 }
