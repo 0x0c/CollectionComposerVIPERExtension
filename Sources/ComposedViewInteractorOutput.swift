@@ -9,5 +9,5 @@ import CollectionComposer
 
 @MainActor
 public protocol ComposedViewInteractorOutput: AnyObject {
-    func needsUpdateSections()
+    func updateSections()
 }
