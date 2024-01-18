@@ -7,7 +7,7 @@
 
 import Foundation
 
-public protocol ComposedViewFetchableInteractorInput: AnyObject, ComposedViewInteractorInput {
+public protocol ComposedViewFetchableInteractorInput: AnyObject {
     associatedtype Repository: ComposedViewRepositoryInterface
 
     var repository: Repository { get }
