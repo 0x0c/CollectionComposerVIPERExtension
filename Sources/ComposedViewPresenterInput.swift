@@ -12,5 +12,6 @@ import UIKit
 public protocol ComposedViewPresenterInput: AnyObject {
     var sections: [any CollectionComposer.Section] { get }
 
+    func needsUpdateSections()
     func didSelectItem(_ item: AnyHashable, in section: any Section, at indexPath: IndexPath)
 }
