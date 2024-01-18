@@ -9,7 +9,7 @@ import Combine
 import Foundation
 
 @MainActor
-public protocol ComposedViewFetchablePresenterInput: ComposedViewPresenterInput {
+public protocol ComposedViewFetchablePresenterInput {
     var isLoadingPublisher: Published<Bool>.Publisher { get }
 
     func reload()
