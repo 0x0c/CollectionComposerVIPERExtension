@@ -11,7 +11,7 @@ public protocol ComposedViewFetchableInteractorInput: AnyObject {
     associatedtype Repository: ComposedViewRepositoryInterface
 
     var repository: Repository { get }
-    var storage: Repository.Entity { get }
+    var storage: Repository.Entity? { get }
 
     func fetch(force: Bool) async throws
 }
