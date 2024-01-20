@@ -5,13 +5,10 @@
 //  Created by Akira Matsuda on 2023/11/08.
 //
 
-import Combine
 import Foundation
 
 @MainActor
 public protocol ComposedViewFetchablePresenterInput {
-    var isLoadingPublisher: Published<Bool>.Publisher { get }
-
     func fetch(force: Bool)
 }
 
