@@ -15,7 +15,7 @@ let package = Package(
         ),
     ],
     dependencies: [
-        .package(url: "https://github.com/0x0c/CollectionComposer.git", from: "1.0.0")
+        .package(url: "https://github.com/0x0c/CollectionComposer.git", branch: "main")
     ],
     targets: [
         .target(
